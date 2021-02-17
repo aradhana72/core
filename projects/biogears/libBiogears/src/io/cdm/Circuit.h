@@ -56,7 +56,7 @@ namespace io {
     template <CIRCUIT_TEMPLATE>
     static void Marshall(const CircuitBindType&  in, SECircuit<CIRCUIT_TYPES>& out, const std::map<std::string, NodeType*>& nodes, const std::map<std::string, PathType*>& paths);
     template <CIRCUIT_TEMPLATE>
-    static void UnMarshall(const SECircuit<CIRCUIT_TYPES>& in, const CircuitBindType&  out);
+    static void UnMarshall(const SECircuit<CIRCUIT_TYPES>& in, CircuitBindType&  out);
     //class SECircuitNode
     template <CIRCUIT_NODE_TEMPLATE>
     static void Marshall(const CDM::CircuitNodeData& in, SECircuitNode<CIRCUIT_NODE_TYPES>& out);
@@ -149,7 +149,7 @@ namespace io {
   }
   //----------------------------------------------------------------------------------
   template <CIRCUIT_TEMPLATE>
-  void Circuit::UnMarshall(const SECircuit<CIRCUIT_TYPES>& in, const CircuitBindType& out)
+  void Circuit::UnMarshall(const SECircuit<CIRCUIT_TYPES>& in, CircuitBindType& out)
   {
     out.Name(in.m_Name);
     if (in.HasReferenceNode()) {
