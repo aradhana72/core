@@ -150,7 +150,7 @@ namespace io {
   void Circuit::UnMarshall(const SECircuit<CIRCUIT_TYPES>& in, CDM::CircuitData& out)
   {
     out.Name(in.m_Name);
-    if (HasReferenceNode()) {
+    if (in.HasReferenceNode()) {
       for (NodeType* n : in.m_ReferenceNodes)
         out.ReferenceNode().push_back(n->GetName());
     }
