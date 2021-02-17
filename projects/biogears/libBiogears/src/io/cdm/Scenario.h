@@ -124,7 +124,9 @@ namespace io {
     static void Marshall(const CDM::SerializeStateData& in, SESerializeState& out);
     static void UnMarshall(const SESerializeState& in, CDM::SerializeStateData& out);
 
-    static std::unique_ptr<SEDataRequest> factory(const CDM::DataRequestData& in, SESubstanceManager const& substances,  SEDecimalFormat const* default);
+    static std::unique_ptr<SEDataRequest> 
+    factory(const CDM::DataRequestData& in, SESubstanceManager const& substances,  SEDecimalFormat const* default);
+
     static std::unique_ptr<CDM::DataRequestData> factory(const SEDataRequest* in);
   };
 
